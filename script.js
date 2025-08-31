@@ -172,7 +172,7 @@ function resetFilters() {
 async function fetchProductsFromGoogleSheets() {
     try {
         // Replace this URL with your published Google Sheets CSV URL
-        const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS-Zy85UIikWdJx53fCrXkY_Dz4FyH7JeyESln0t8HxgJJ0M9G24w3pLFr0KIm33djPoGJqjB8cmk4q/pub?gid=0&single=true&output=csv';
+        const sheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRMjPUnZhjqGo_x1tElyuFPK225MhFBJjrqk01VoSEPqEU0zyxhI3488q7hv_nR2FxwunItQDcP_Y6a/pub?gid=0&single=true&output=csv';
         
         const response = await fetch(sheetUrl);
         const csvData = await response.text();
