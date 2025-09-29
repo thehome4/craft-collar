@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craft & Collar | Premium Shirts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="logo" onclick="location.reload()">
+            <img src="images/logo2.jpg" alt="Logo">
+            <span>&nbsp;Craft</span><span class="ampersand">&</span><span>Collar</span>
+        </div>
+        
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for shirts...">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+            <button class="filter-btn" id="filter-modal-btn"><i class="fas fa-filter"></i> Filter</button>
+        </div>
+        
+        <div class="contact-icons">
+            <a href="https://wa.me/8801515270062" target="_blank" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.facebook.com/craftandcollar" target="_blank" title="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <div class="product-count">Products: <span id="product-count">0</span></div>
+        </div>
+    </div>
+    
+    <!-- Discount Banner -->
+    <div class="discount-banner">
+        <div class="discount-text" id="discount-text">Loading best offers...</div>
+    </div>
+    
+    <!-- Products Container -->
+    <div class="products-container">
+        <h2>Premium Collection</h2>
+        <div class="products-grid" id="products-grid">
+            <div class="spinner" id="loading-spinner"></div>
+        </div>
+    </div>
+    
+    <!-- Product Detail Modal -->
+    <div class="modal" id="product-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Product Details</h2>
+                <span class="close-modal" id="close-modal">&times;</span>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Product details will be loaded here -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Filter Modal -->
+    <div class="filter-modal" id="filter-modal">
+        <div class="filter-content">
+            <h2>Filter Products</h2>
+            <div class="price-range">
+                <h3>Price Range</h3>
+                <div style="display: flex; justify-content: space-between; margin-top: 1rem;">
+                    <div>
+                        <label for="min-price">Min Price (BDT)</label>
+                        <input type="number" id="min-price" min="0" placeholder="0" style="width: 100%; padding: 0.5rem; margin-top: 0.5rem;">
+                    </div>
+                    <div>
+                        <label for="max-price">Max Price (BDT)</label>
+                        <input type="number" id="max-price" min="0" placeholder="10000" style="width: 100%; padding: 0.5rem; margin-top: 0.5rem;">
+                    </div>
+                </div>
+            </div>
+            <div class="filter-buttons">
+                <button class="reset-filter" id="reset-filter">Reset</button>
+                <button class="apply-filter" id="apply-filter">Apply Filters</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+     <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/8801515270062?text=Hi%20I%20am%20interested%20in%20your%20products" 
+       class="whatsapp-float" 
+       target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    </body>
+    </html>
